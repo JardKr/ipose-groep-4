@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f3ec9511-ae6c-4b0c-9ded-b4aebc25fba8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlatformerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlatformerApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlayerButtonHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.30.11.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlayerComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlayerComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/textures/player.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/textures/player.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,19 +37,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/ipose-groep-4&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/meijr/OneDrive/Documenten/GitHub/ipose-groep-4",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\meijr\OneDrive\Documenten\GitHub\ipose-groep-4\src\main\resources\assets\textures" />
       <recent name="C:\Users\koenm\IdeaProjects\demo1\src\main\resources\assets\sounds" />
       <recent name="C:\Users\koenm\IdeaProjects\demo1\src\main\resources\assets\textures" />
       <recent name="C:\Users\koenm\IdeaProjects\demo1\src\main\resources\assets" />
@@ -71,7 +77,7 @@
     </configuration>
     <configuration name="PlatformerApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.almasb.fxglgames.platformer.PlatformerApp" />
-      <module name="demo1" />
+      <module name="ipose-groep-4" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.almasb.fxglgames.platformer.*" />
@@ -220,6 +226,7 @@
       <updated>1680535120645</updated>
       <workItem from="1680535122064" duration="1020000" />
       <workItem from="1680594987438" duration="5200000" />
+      <workItem from="1680613480064" duration="322000" />
     </task>
     <servers />
   </component>

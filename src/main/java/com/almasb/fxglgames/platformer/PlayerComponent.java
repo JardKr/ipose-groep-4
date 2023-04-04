@@ -27,8 +27,8 @@ public class PlayerComponent extends Component {
 
         Image image = image("player.png");
 
-        animIdle = new AnimationChannel(image, 4, 32, 42, Duration.seconds(1), 1, 1);
-        animWalk = new AnimationChannel(image, 4, 32, 42, Duration.seconds(0.66), 0, 3);
+        animIdle = new AnimationChannel(image, 4, 35, 42, Duration.seconds(1), 1, 1);
+        animWalk = new AnimationChannel(image, 4, 35, 42, Duration.seconds(0.66), 0, 3);
 
         texture = new AnimatedTexture(animIdle);
         texture.loop();
