@@ -48,6 +48,7 @@ public class PlatformerApp extends GameApplication {
 
     private LazyValue<LevelEndScene> levelEndScene = new LazyValue<>(() -> new LevelEndScene());
     private Entity player;
+    private Entity trump;
 
     @Override
     protected void initInput() {
@@ -121,14 +122,16 @@ public class PlatformerApp extends GameApplication {
         getGameWorld().addEntityFactory(new PlatformerFactory());
 
         player = null;
+        trump = null;
         nextLevel();
 
         // player must be spawned after call to nextLevel, otherwise player gets removed
         // before the update tick _actually_ adds the player to game world
         player = spawn("player", 50, 50);
+        trump = spawn("trump",10,10);
 
         set("player", player);
-
+        set("trump", trump);
         spawn("background");
 
         Viewport viewport = getGameScene().getViewport();

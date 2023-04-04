@@ -4,14 +4,12 @@ import com.almasb.fxgl.entity.component.Component;
 import com.almasb.fxgl.physics.PhysicsComponent;
 import com.almasb.fxgl.texture.AnimatedTexture;
 import com.almasb.fxgl.texture.AnimationChannel;
-import javafx.geometry.Point2D;
 import javafx.scene.image.Image;
 import javafx.util.Duration;
 
 import static com.almasb.fxgl.dsl.FXGL.image;
 
-public class PlayerComponent extends Component {
-
+public class Trump extends Component {
     private PhysicsComponent physics;
 
     private AnimatedTexture texture;
@@ -20,27 +18,15 @@ public class PlayerComponent extends Component {
 
     private int jumps = 1;
 
-    public PlayerComponent() {
+    public Trump() {
 
-        Image image = image("player.png");
+        Image image = image("trump.png");
 
         animIdle = new AnimationChannel(image, 4, 32, 42, Duration.seconds(1), 1, 1);
         animWalk = new AnimationChannel(image, 4, 32, 42, Duration.seconds(0.66), 0, 3);
 
         texture = new AnimatedTexture(animIdle);
         texture.loop();
-    }
-
-    @Override
-    public void onAdded() {
-        entity.getTransformComponent().setScaleOrigin(new Point2D(16, 21));
-        entity.getViewComponent().addChild(texture);
-
-        physics.onGroundProperty().addListener((obs, old, isOnGround) -> {
-            if (isOnGround) {
-                jumps = 1;
-            }
-        });
     }
 
     @Override
@@ -56,26 +42,8 @@ public class PlayerComponent extends Component {
         }
     }
 
-    public void left() {
-        getEntity().setScaleX(-1);
-        physics.setVelocityX(-170);
-    }
-
     public void right() {
         getEntity().setScaleX(1);
         physics.setVelocityX(400);
-    }
-
-    public void stop() {
-        physics.setVelocityX(0);
-    }
-
-    public void jump() {
-        if (jumps == 0)
-            return;
-
-        physics.setVelocityY(-400);
-
-        jumps--;
     }
 }
