@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3ec9511-ae6c-4b0c-9ded-b4aebc25fba8" name="Changes" comment="">
+<<<<<<< Updated upstream
       <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
@@ -29,6 +30,28 @@
       <change afterPath="$PROJECT_DIR$/src/main/resources/assets/sounds/fxgl-samples_src_main_resources_assets_sounds_drop.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/assets/sounds/pipe.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/assets/textures/brick.png" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.43.57.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.47.41.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.23.48.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.23.48.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.26.56.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.26.56.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.27.21.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.27.21.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.30.11.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.31.06.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.31.06.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.32.39.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.32.39.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.33.52.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.33.52.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.34.27.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.34.27.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.35.08.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.38.17.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.38.17.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/EntityType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nieuw/MiguelPlatformer/EntityType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/LevelEndScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nieuw/MiguelPlatformer/LevelEndScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/MainLoadingScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nieuw/MiguelPlatformer/MainLoadingScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlatformerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nieuw/MiguelPlatformer/PlatformerApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlatformerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nieuw/MiguelPlatformer/PlatformerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlayerButtonHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlayerComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nieuw/MiguelPlatformer/PlayerComponent.java" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
