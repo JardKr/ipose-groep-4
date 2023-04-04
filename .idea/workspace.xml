@@ -5,7 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3ec9511-ae6c-4b0c-9ded-b4aebc25fba8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.23.48.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.26.56.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.27.21.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.30.11.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.31.06.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.32.39.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.33.52.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.34.27.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.35.08.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-03-apr.-2023-17.22.34.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-03-apr.-2023-17.25.09.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-03-apr.-2023-17.28.16.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-10.51.13.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-10.51.45.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-10.52.14.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-10.58.22.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-10.59.55.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-11.13.34.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.16.21.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/LevelEndScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/LevelEndScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlatformerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlatformerApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlayerComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlayerComponent.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,17 +56,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/ipose-groep-4",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/ipose-groep-4&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\koenm\IdeaProjects\demo1\src\main\resources\assets\sounds" />

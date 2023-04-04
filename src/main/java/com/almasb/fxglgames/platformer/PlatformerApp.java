@@ -17,6 +17,7 @@ import com.almasb.fxgl.input.UserAction;
 import com.almasb.fxgl.input.view.KeyView;
 import com.almasb.fxgl.input.virtual.VirtualButton;
 import com.almasb.fxgl.physics.PhysicsComponent;
+import javafx.application.Platform;
 import javafx.geometry.Point2D;
 import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
@@ -27,17 +28,14 @@ import java.util.Map;
 import static com.almasb.fxgl.dsl.FXGL.*;
 import static com.almasb.fxglgames.platformer.EntityType.*;
 
-/**
- * @author Almas Baimagambetov (almaslvl@gmail.com)
- */
 public class PlatformerApp extends GameApplication {
 
-    private static final int MAX_LEVEL = 5;
+    private static final int MAX_LEVEL = 3;
     private static final int STARTING_LEVEL = 0;
 
     @Override
     protected void initSettings(GameSettings settings) {
-        settings.setWidth(1280);
+        settings.setWidth(1400);
         settings.setHeight(720);
         settings.setSceneFactory(new SceneFactory() {
             @Override
@@ -144,18 +142,6 @@ public class PlatformerApp extends GameApplication {
         getPhysicsWorld().setGravity(0, 760);
         getPhysicsWorld().addCollisionHandler(new PlayerButtonHandler());
 
-        onCollisionOneTimeOnly(PLAYER, EXIT_SIGN, (player, sign) -> {
-            var texture = texture("exit_sign.png").brighter();
-            texture.setTranslateX(sign.getX() + 9);
-            texture.setTranslateY(sign.getY() + 13);
-
-            var gameView = new GameView(texture, 150);
-
-            getGameScene().addGameView(gameView);
-
-            runOnce(() -> getGameScene().removeGameView(gameView), Duration.seconds(1.6));
-        });
-
         onCollisionOneTimeOnly(PLAYER, DOOR_BOT, (player, door) -> {
             levelEndScene.get().onLevelFinish();
 
@@ -196,7 +182,7 @@ public class PlatformerApp extends GameApplication {
 
     private void nextLevel() {
         if (geti("level") == MAX_LEVEL) {
-            showMessage("You finished the demo!");
+            showMessage("Gefeliciteerd je hebt gewonnen!");
             return;
         }
 
@@ -235,15 +221,11 @@ public class PlatformerApp extends GameApplication {
             player.setZIndex(Integer.MAX_VALUE);
         }
 
-        set("levelTime", 0.0);
 
         Level level = setLevelFromMap("tmx/level" + levelNum  + ".tmx");
 
         var shortestTime = level.getProperties().getDouble("star1time");
 
-        var levelTimeData = new LevelEndScene.LevelTimeData(shortestTime * 2.4, shortestTime*1.3, shortestTime);
-
-        set("levelTimeData", levelTimeData);
     }
 
     public static void main(String[] args) {
