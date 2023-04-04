@@ -140,7 +140,6 @@ public class PlatformerApp extends GameApplication {
     @Override
     protected void initPhysics() {
         getPhysicsWorld().setGravity(0, 760);
-        getPhysicsWorld().addCollisionHandler(new PlayerButtonHandler());
 
         onCollisionOneTimeOnly(PLAYER, DOOR_BOT, (player, door) -> {
             levelEndScene.get().onLevelFinish();
