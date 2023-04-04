@@ -23,19 +23,15 @@ import javafx.util.Duration;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
 
-/**
- * @author Almas Baimagambetov (almaslvl@gmail.com)
- */
 public class LevelEndScene extends SubScene {
 
     private static final int WIDTH = 400;
     private static final int HEIGHT = 250;
 
     private Text textUserTime = getUIFactoryService().newText("", Color.WHITE, 24.0);
-    private HBox gradeBox = new HBox();
 
     private FontFactory levelFont = getAssetLoader().loadFont(getSettings().getFontMono());
-    private BooleanProperty isAnimationDone = new SimpleBooleanProperty(false);
+    private BooleanProperty isAnimationDone = new SimpleBooleanProperty(true);
 
     public LevelEndScene() {
         var bg = new Rectangle(WIDTH, HEIGHT, Color.color(0, 0, 0, 0.85));
@@ -43,11 +39,10 @@ public class LevelEndScene extends SubScene {
         bg.setStrokeWidth(1.75);
         bg.setEffect(new DropShadow(28, Color.color(0,0,0, 0.9)));
 
-        VBox.setVgrow(gradeBox, Priority.ALWAYS);
 
         var textContinue = getUIFactoryService().newText("Tap to continue", Color.WHITE, 11.0);
 
-        var vbox = new VBox(15, textUserTime, gradeBox, textContinue);
+        var vbox = new VBox(15, textUserTime,  textContinue);
         vbox.setAlignment(Pos.CENTER);
         vbox.setPadding(new Insets(25));
 
@@ -74,27 +69,11 @@ public class LevelEndScene extends SubScene {
     public void onLevelFinish() {
         isAnimationDone.setValue(true);
 
-        Duration userTime = Duration.seconds(getd("levelTime"));
-
-
-
+//        Duration userTime = Duration.seconds(getd("levelTime"));
         //textUserTime.setText(String.format("Your time: %.2f sec!", userTime.toSeconds()));
 
 
-        for (int i = 0; i < gradeBox.getChildren().size(); i++) {
-            var builder = animationBuilder(this).delay(Duration.seconds(i * 0.75))
-                    .duration(Duration.seconds(0.75))
-                    .interpolator(Interpolators.ELASTIC.EASE_OUT());
 
-            // if last star animation
-            if (i == gradeBox.getChildren().size() - 1) {
-                builder = builder.onFinished(() -> isAnimationDone.setValue(true));
-            }
-
-            builder.translate(gradeBox.getChildren().get(i))
-                    .from(new Point2D(0, -500))
-                    .to(new Point2D(0, 0));
-        }
 
         getSceneService().pushSubScene(this);
     }
