@@ -1,5 +1,7 @@
 package com.almasb.fxglgames.platformer;
 
-public class Trump {
+import com.almasb.fxgl.entity.component.Component;
+
+public class Trump extends Component {
 
 }
