@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f3ec9511-ae6c-4b0c-9ded-b4aebc25fba8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-05-apr.-2023-12.08.33.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlatformerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlatformerApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-05-apr.-2023-12.12.47.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-05-apr.-2023-12.13.59.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlatformerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlatformerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlayerComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlayerComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/Trump.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/Trump.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/textures/player.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/textures/player.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

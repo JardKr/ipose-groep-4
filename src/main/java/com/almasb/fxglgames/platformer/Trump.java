@@ -23,8 +23,8 @@ public class Trump extends Component {
 
         Image image = image("trump.png");
 
-        animIdle = new AnimationChannel(image, 1, 96, 154, Duration.seconds(0), 0, 0);
-        animWalk = new AnimationChannel(image, 1, 96, 154, Duration.seconds(0), 0, 0);
+        animIdle = new AnimationChannel(image, 4, 84, 209, Duration.seconds(0.66), 0, 3);
+        animWalk = new AnimationChannel(image, 4, 84, 209, Duration.seconds(0.66), 0, 3);
 
         texture = new AnimatedTexture(animIdle);
         texture.loop();

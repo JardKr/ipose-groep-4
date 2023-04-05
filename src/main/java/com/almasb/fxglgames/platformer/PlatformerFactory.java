@@ -114,7 +114,7 @@ public class PlatformerFactory implements EntityFactory {
 
         return entityBuilder(data)
                 .type(TRUMP)
-                .bbox(new HitBox(new Point2D(10,25), BoundingShape.box(96, 154)))
+                .bbox(new HitBox(new Point2D(10,25), BoundingShape.box(80, 220)))
                 .with(physics)
                 .with(new CollidableComponent(true))
                 .with(new IrremovableComponent())
