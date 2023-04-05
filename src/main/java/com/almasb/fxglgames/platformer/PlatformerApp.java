@@ -39,7 +39,7 @@ public class PlatformerApp extends GameApplication {
     protected void initSettings(GameSettings settings) {
         settings.setTitle("Miguel");
         settings.setVersion("1.0");
-        settings.setWidth(1400);
+        settings.setWidth(1280);
         settings.setHeight(720);
         settings.setSceneFactory(new SceneFactory() {
             @Override
