@@ -16,7 +16,7 @@ import static com.almasb.fxgl.dsl.FXGL.*;
 public class MainLoadingScene extends LoadingScene {
 
     public MainLoadingScene() {
-        var bg = new Rectangle(getAppWidth(), getAppHeight(), Color.AZURE);
+        Rectangle bg = new Rectangle(getAppWidth(), getAppHeight(), Color.AZURE);
 
         var text = getUIFactoryService().newText("Loading level", Color.BLACK, 46.0);
         centerText(text, getAppWidth() / 2, getAppHeight() / 3  + 25);

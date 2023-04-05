@@ -133,6 +133,7 @@ public class PlatformerApp extends GameApplication {
 
         player = null;
         trump = null;
+
         nextLevel();
 
         // player must be spawned after call to nextLevel, otherwise player gets removed
@@ -252,6 +253,7 @@ public class PlatformerApp extends GameApplication {
     public void onPlayerDied() {
         //setLevel(geti("level"));
         showMessage("ded", () ->{
+            System.out.println("r");
             getGameController().startNewGame();
 
         });
@@ -260,14 +262,14 @@ public class PlatformerApp extends GameApplication {
     private void setLevel(int levelNum) {
         if (player != null) {
             player.getComponent(PhysicsComponent.class).overwritePosition(new Point2D(900, 50));
-            trump.getComponent(PhysicsComponent.class).overwritePosition(new Point2D(0, 50));
+            trump.getComponent(PhysicsComponent.class).overwritePosition(new Point2D(0, -655));
             player.setZIndex(Integer.MAX_VALUE);
         }
 
 
         Level level = setLevelFromMap("tmx/level" + levelNum  + ".tmx");
 
-        var shortestTime = level.getProperties().getDouble("star1time");
+        double shortestTime = level.getProperties().getDouble("star1time");
 
     }
 

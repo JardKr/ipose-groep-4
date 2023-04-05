@@ -90,7 +90,7 @@ public class PlatformerFactory implements EntityFactory {
         physics.addGroundSensor(new HitBox("GROUND_SENSOR", new Point2D(16, 38), BoundingShape.box(6, 8)));
 
         // this avoids player sticking to walls
-        physics.setFixtureDef(new FixtureDef().friction(0.0f));
+        physics.setFixtureDef(new FixtureDef().friction(0));
 
         return entityBuilder(data)
                 .type(PLAYER)
@@ -114,7 +114,8 @@ public class PlatformerFactory implements EntityFactory {
 
         return entityBuilder(data)
                 .type(TRUMP)
-                .bbox(new HitBox(new Point2D(10,25), BoundingShape.box(80, 220)))
+                .bbox(new HitBox(new Point2D(10,-655), BoundingShape.box(80, 900)))
+
                 .with(physics)
                 .with(new CollidableComponent(true))
                 .with(new IrremovableComponent())
