@@ -9,6 +9,7 @@ import com.almasb.fxgl.app.scene.LoadingScene;
 import com.almasb.fxgl.app.scene.SceneFactory;
 import com.almasb.fxgl.app.scene.Viewport;
 import com.almasb.fxgl.core.util.LazyValue;
+import com.almasb.fxgl.dsl.FXGL;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.SpawnData;
 import com.almasb.fxgl.entity.components.CollidableComponent;
@@ -16,6 +17,7 @@ import com.almasb.fxgl.entity.level.Level;
 import com.almasb.fxgl.input.UserAction;
 import com.almasb.fxgl.input.view.KeyView;
 import com.almasb.fxgl.input.virtual.VirtualButton;
+import com.almasb.fxgl.physics.CollisionHandler;
 import com.almasb.fxgl.physics.PhysicsComponent;
 import javafx.application.Platform;
 import javafx.geometry.Point2D;
@@ -54,6 +56,8 @@ public class PlatformerApp extends GameApplication {
     private Entity player;
     private Entity trump;
 
+
+
     @Override
     protected void initInput() {
         getInput().addAction(new UserAction("Left") {
@@ -80,13 +84,7 @@ public class PlatformerApp extends GameApplication {
             }
         }, KeyCode.D, VirtualButton.RIGHT);
 
-        getInput().addAction(new UserAction("TrumpRight") {
-            @Override
-            protected void onAction() {
-                trump.getComponent(Trump.class).right();
-            }
 
-        }, KeyCode.H, VirtualButton.RIGHT);
 
         getInput().addAction(new UserAction("Jump") {
             @Override
@@ -154,6 +152,13 @@ public class PlatformerApp extends GameApplication {
 
     @Override
     protected void initPhysics() {
+        FXGL.getPhysicsWorld().addCollisionHandler(new CollisionHandler(EntityType.MUUR, EntityType.TRUMP) {
+            @Override
+            protected void onCollision(Entity muur, Entity trump) {
+                muur.removeFromWorld();
+                System.out.println("print");
+            }
+        });
         getPhysicsWorld().setGravity(0, 760);
 
         onCollisionOneTimeOnly(PLAYER, DOOR_BOT, (player, door) -> {
@@ -174,6 +179,13 @@ public class PlatformerApp extends GameApplication {
 
             despawnWithDelay(prompt, Duration.seconds(4.5));
         });
+
+//        onCollisionBegin(TRUMP, MUUR, (trump, muur) -> {
+//            var entity = getGameWorld().create("muur", new SpawnData(muur.getX(), muur.getY()).put("muur", muur));
+//
+//            muur.removeFromWorld();
+//
+//        });
 
         onCollisionBegin(PLAYER, KEY_PROMPT, (player, prompt) -> {
             String key = prompt.getString("key");
@@ -230,6 +242,11 @@ public class PlatformerApp extends GameApplication {
         onCollisionBegin(PLAYER, TRUMP, (player, trump) -> {
             onPlayerDied();
         });
+
+
+        trump.getComponent(Trump.class).right();
+
+
     }
 
     public void onPlayerDied() {

@@ -14,7 +14,6 @@ import com.almasb.fxgl.physics.HitBox;
 import com.almasb.fxgl.physics.PhysicsComponent;
 import com.almasb.fxgl.physics.box2d.dynamics.BodyType;
 import com.almasb.fxgl.physics.box2d.dynamics.FixtureDef;
-import com.almasb.fxgl.ui.FontType;
 import javafx.geometry.Point2D;
 import javafx.scene.CacheHint;
 import javafx.scene.input.KeyCode;
@@ -44,6 +43,16 @@ public class PlatformerFactory implements EntityFactory {
                 .type(PLATFORM)
                 .bbox(new HitBox(BoundingShape.box(data.<Integer>get("width"), data.<Integer>get("height"))))
                 .with(new PhysicsComponent())
+                .build();
+    }
+
+    @Spawns("muur")
+    public Entity newMuur(SpawnData data){
+        return entityBuilder(data)
+                .type(MUUR)
+                .bbox(new HitBox(BoundingShape.box(data.<Integer>get("width"), data.<Integer>get("height"))))
+                .with(new PhysicsComponent())
+                .with(new CollidableComponent(true))
                 .build();
     }
 
@@ -105,8 +114,7 @@ public class PlatformerFactory implements EntityFactory {
 
         return entityBuilder(data)
                 .type(TRUMP)
-                .bbox(new HitBox(new Point2D(5,5), BoundingShape.circle(120)))
-                .bbox(new HitBox(new Point2D(10,25), BoundingShape.box(200, 450)))
+                .bbox(new HitBox(new Point2D(10,25), BoundingShape.box(96, 154)))
                 .with(physics)
                 .with(new CollidableComponent(true))
                 .with(new IrremovableComponent())

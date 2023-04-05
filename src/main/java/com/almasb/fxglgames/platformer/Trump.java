@@ -23,8 +23,8 @@ public class Trump extends Component {
 
         Image image = image("trump.png");
 
-        animIdle = new AnimationChannel(image, 4, 500, 500, Duration.seconds(1), 1, 1);
-        animWalk = new AnimationChannel(image, 4, 500, 500, Duration.seconds(0.66), 0, 3);
+        animIdle = new AnimationChannel(image, 1, 96, 154, Duration.seconds(0), 0, 0);
+        animWalk = new AnimationChannel(image, 1, 96, 154, Duration.seconds(0), 0, 0);
 
         texture = new AnimatedTexture(animIdle);
         texture.loop();
@@ -61,8 +61,19 @@ public class Trump extends Component {
         physics.setVelocityX(150);
     }
 
+    public void jump() {
+        if (jumps == 0)
+            return;
+
+        physics.setVelocityY(-700);
+
+        jumps--;
+    }
+
 
     public void stop() {
         physics.setVelocityX(0);
     }
+
+
 }
