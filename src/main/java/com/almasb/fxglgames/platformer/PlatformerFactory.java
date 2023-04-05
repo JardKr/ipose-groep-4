@@ -24,9 +24,6 @@ import javafx.util.Duration;
 import static com.almasb.fxgl.dsl.FXGL.*;
 import static com.almasb.fxglgames.platformer.EntityType.*;
 
-/**
- * @author Almas Baimagambetov (almaslvl@gmail.com)
- */
 public class PlatformerFactory implements EntityFactory {
 
     @Spawns("background")

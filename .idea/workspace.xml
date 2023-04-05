@@ -6,11 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f3ec9511-ae6c-4b0c-9ded-b4aebc25fba8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.38.17.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-14.18.51.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-14.32.50.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-15.01.04.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-15.02.25.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/Trump.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/Trump.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,6 +121,7 @@
         <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
       </method>
     </configuration>
+  <component name="RunManager" selected="Application.PlatformerApp">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.demo1.HelloApplication" />
       <module name="demo1" />
