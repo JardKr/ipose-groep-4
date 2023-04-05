@@ -105,33 +105,16 @@ public class PlatformerFactory implements EntityFactory {
 
         return entityBuilder(data)
                 .type(TRUMP)
-                .bbox(new HitBox(new Point2D(5,5), BoundingShape.circle(12)))
-                .bbox(new HitBox(new Point2D(10,25), BoundingShape.box(10, 17)))
+                .bbox(new HitBox(new Point2D(5,5), BoundingShape.circle(120)))
+                .bbox(new HitBox(new Point2D(10,25), BoundingShape.box(200, 450)))
                 .with(physics)
                 .with(new CollidableComponent(true))
                 .with(new IrremovableComponent())
-                .with(new PlayerComponent())
+                .with(new Trump())
                 .build();
     }
 
 
-    @Spawns("exitSign")
-    public Entity newExit(SpawnData data) {
-        return entityBuilder(data)
-                .type(EXIT_SIGN)
-                .bbox(new HitBox(BoundingShape.box(data.<Integer>get("width"), data.<Integer>get("height"))))
-                .with(new CollidableComponent(true))
-                .build();
-    }
-
-    @Spawns("keyPrompt")
-    public Entity newPrompt(SpawnData data) {
-        return entityBuilder(data)
-                .type(KEY_PROMPT)
-                .bbox(new HitBox(BoundingShape.box(data.<Integer>get("width"), data.<Integer>get("height"))))
-                .with(new CollidableComponent(true))
-                .build();
-    }
 
     @Spawns("keyCode")
     public Entity newKeyCode(SpawnData data) {
@@ -154,18 +137,6 @@ public class PlatformerFactory implements EntityFactory {
                 .build();
     }
 
-    @Spawns("button")
-    public Entity newButton(SpawnData data) {
-        var keyEntity = getGameWorld().create("keyCode", new SpawnData(data.getX(), data.getY() - 50).put("key", "E"));
-        keyEntity.getViewComponent().setOpacity(0);
-
-        return entityBuilder(data)
-                .type(BUTTON)
-                .viewWithBBox(texture("button.png", 20, 18))
-                .with(new CollidableComponent(true))
-                .with("keyEntity", keyEntity)
-                .build();
-    }
 
 //    @Spawns("messagePrompt")
 //    public Entity newMessagePrompt(SpawnData data) {

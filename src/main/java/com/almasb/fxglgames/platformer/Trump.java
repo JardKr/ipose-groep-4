@@ -4,6 +4,7 @@ import com.almasb.fxgl.entity.component.Component;
 import com.almasb.fxgl.physics.PhysicsComponent;
 import com.almasb.fxgl.texture.AnimatedTexture;
 import com.almasb.fxgl.texture.AnimationChannel;
+import javafx.geometry.Point2D;
 import javafx.scene.image.Image;
 import javafx.util.Duration;
 
@@ -22,12 +23,25 @@ public class Trump extends Component {
 
         Image image = image("trump.png");
 
-        animIdle = new AnimationChannel(image, 4, 32, 42, Duration.seconds(1), 1, 1);
-        animWalk = new AnimationChannel(image, 4, 32, 42, Duration.seconds(0.66), 0, 3);
+        animIdle = new AnimationChannel(image, 4, 500, 500, Duration.seconds(1), 1, 1);
+        animWalk = new AnimationChannel(image, 4, 500, 500, Duration.seconds(0.66), 0, 3);
 
         texture = new AnimatedTexture(animIdle);
         texture.loop();
     }
+
+    @Override
+    public void onAdded() {
+        entity.getTransformComponent().setScaleOrigin(new Point2D(16, 21));
+        entity.getViewComponent().addChild(texture);
+
+        physics.onGroundProperty().addListener((obs, old, isOnGround) -> {
+            if (isOnGround) {
+                jumps = 1;
+            }
+        });
+    }
+
 
     @Override
     public void onUpdate(double tpf) {
@@ -44,6 +58,11 @@ public class Trump extends Component {
 
     public void right() {
         getEntity().setScaleX(1);
-        physics.setVelocityX(400);
+        physics.setVelocityX(150);
+    }
+
+
+    public void stop() {
+        physics.setVelocityX(0);
     }
 }

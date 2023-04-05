@@ -35,6 +35,8 @@ public class PlatformerApp extends GameApplication {
 
     @Override
     protected void initSettings(GameSettings settings) {
+        settings.setTitle("Miguel");
+        settings.setVersion("1.0");
         settings.setWidth(1400);
         settings.setHeight(720);
         settings.setSceneFactory(new SceneFactory() {
@@ -44,6 +46,8 @@ public class PlatformerApp extends GameApplication {
             }
         });
         settings.setApplicationMode(ApplicationMode.DEVELOPER);
+        settings.setMainMenuEnabled(true);
+
     }
 
     private LazyValue<LevelEndScene> levelEndScene = new LazyValue<>(() -> new LevelEndScene());
@@ -75,6 +79,14 @@ public class PlatformerApp extends GameApplication {
                 player.getComponent(PlayerComponent.class).stop();
             }
         }, KeyCode.D, VirtualButton.RIGHT);
+
+        getInput().addAction(new UserAction("TrumpRight") {
+            @Override
+            protected void onAction() {
+                trump.getComponent(Trump.class).right();
+            }
+
+        }, KeyCode.H, VirtualButton.RIGHT);
 
         getInput().addAction(new UserAction("Jump") {
             @Override
@@ -127,8 +139,8 @@ public class PlatformerApp extends GameApplication {
 
         // player must be spawned after call to nextLevel, otherwise player gets removed
         // before the update tick _actually_ adds the player to game world
-        player = spawn("player", 50, 50);
-        trump = spawn("trump",10,10);
+        player = spawn("player", 900, 50);
+        trump = spawn("trump",0,50);
 
         set("player", player);
         set("trump", trump);
@@ -153,6 +165,9 @@ public class PlatformerApp extends GameApplication {
                 nextLevel();
             });
         });
+
+
+
 
         onCollisionOneTimeOnly(PLAYER, MESSAGE_PROMPT, (player, prompt) -> {
             prompt.setOpacity(1);
@@ -211,15 +226,24 @@ public class PlatformerApp extends GameApplication {
         if (player.getY() > getAppHeight()) {
             onPlayerDied();
         }
+
+        onCollisionBegin(PLAYER, TRUMP, (player, trump) -> {
+            onPlayerDied();
+        });
     }
 
     public void onPlayerDied() {
-        setLevel(geti("level"));
+        //setLevel(geti("level"));
+        showMessage("ded", () ->{
+            getGameController().startNewGame();
+
+        });
     }
 
     private void setLevel(int levelNum) {
         if (player != null) {
-            player.getComponent(PhysicsComponent.class).overwritePosition(new Point2D(50, 50));
+            player.getComponent(PhysicsComponent.class).overwritePosition(new Point2D(900, 50));
+            trump.getComponent(PhysicsComponent.class).overwritePosition(new Point2D(0, 50));
             player.setZIndex(Integer.MAX_VALUE);
         }
 

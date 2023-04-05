@@ -5,12 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3ec9511-ae6c-4b0c-9ded-b4aebc25fba8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/logs/FXGL-05-apr.-2023-10.49.34.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/FXGL-05-apr.-2023-10.50.28.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/FXGL-05-apr.-2023-10.55.04.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/FXGL-05-apr.-2023-10.56.12.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/FXGL-05-apr.-2023-11.00.54.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/FXGL-05-apr.-2023-11.02.46.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/FXGL-05-apr.-2023-11.06.56.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/FXGL-05-apr.-2023-11.07.31.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/FXGL-05-apr.-2023-11.11.48.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/FXGL-05-apr.-2023-11.16.02.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.38.17.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-14.18.51.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-14.32.50.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-15.01.04.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-15.02.25.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-14.13.29.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-14.15.00.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-14.17.16.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-15.11.49.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-15.16.26.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-15.45.19.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-15.45.49.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-16.01.58.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-16.05.17.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-05-apr.-2023-09.03.46.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlatformerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlatformerApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlatformerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlatformerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlayerComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlayerComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/Trump.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/Trump.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/levels/tmx/level1.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/levels/tmx/level1.tmx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/levels/tmx/level2.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/levels/tmx/level2.tmx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/levels/tmx/level3.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/levels/tmx/level3.tmx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/textures/trump.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/textures/trump.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

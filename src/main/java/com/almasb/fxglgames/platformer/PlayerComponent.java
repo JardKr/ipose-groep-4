@@ -58,12 +58,12 @@ public class PlayerComponent extends Component {
 
     public void left() {
         getEntity().setScaleX(-1);
-        physics.setVelocityX(-170);
+        physics.setVelocityX(-380);
     }
 
     public void right() {
         getEntity().setScaleX(1);
-        physics.setVelocityX(400);
+        physics.setVelocityX(380);
     }
 
     public void stop() {
@@ -74,7 +74,7 @@ public class PlayerComponent extends Component {
         if (jumps == 0)
             return;
 
-        physics.setVelocityY(-400);
+        physics.setVelocityY(-500);
 
         jumps--;
     }
