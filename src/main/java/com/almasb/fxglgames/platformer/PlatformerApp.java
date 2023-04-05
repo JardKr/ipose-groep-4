@@ -267,8 +267,8 @@ public class PlatformerApp extends GameApplication {
         }
 
 
-        Level level = setLevelFromMap("tmx/level" + levelNum  + ".tmx");
-
+//        Level level = setLevelFromMap("tmx/level" + levelNum  + ".tmx");
+          Level level = setLevelFromMap("tmx/level3.tmx");
         double shortestTime = level.getProperties().getDouble("star1time");
 
     }
