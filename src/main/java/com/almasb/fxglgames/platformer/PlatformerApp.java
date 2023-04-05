@@ -4,10 +4,10 @@ import com.almasb.fxgl.animation.Interpolators;
 import com.almasb.fxgl.app.ApplicationMode;
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.app.GameSettings;
-import com.almasb.fxgl.app.scene.GameView;
 import com.almasb.fxgl.app.scene.LoadingScene;
 import com.almasb.fxgl.app.scene.SceneFactory;
 import com.almasb.fxgl.app.scene.Viewport;
+import com.almasb.fxgl.core.collection.PropertyMap;
 import com.almasb.fxgl.core.util.LazyValue;
 import com.almasb.fxgl.dsl.FXGL;
 import com.almasb.fxgl.entity.Entity;
@@ -19,12 +19,21 @@ import com.almasb.fxgl.input.view.KeyView;
 import com.almasb.fxgl.input.virtual.VirtualButton;
 import com.almasb.fxgl.physics.CollisionHandler;
 import com.almasb.fxgl.physics.PhysicsComponent;
-import javafx.application.Platform;
+import com.almasb.fxgl.time.TimerAction;
 import javafx.geometry.Point2D;
+<<<<<<< Updated upstream
+=======
+import javafx.geometry.Pos;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+>>>>>>> Stashed changes
 import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
@@ -32,8 +41,14 @@ import static com.almasb.fxglgames.platformer.EntityType.*;
 
 public class PlatformerApp extends GameApplication {
 
-    private static final int MAX_LEVEL = 3;
+    private static final int MAX_LEVEL = 1;
     private static final int STARTING_LEVEL = 0;
+<<<<<<< Updated upstream
+=======
+    private Text textUserTime = getUIFactoryService().newText("", Color.WHITE, 24.0);
+
+    Map<KeyCode, int[]> inputDict= new HashMap<KeyCode, int[]>();
+>>>>>>> Stashed changes
 
     @Override
     protected void initSettings(GameSettings settings) {
@@ -129,6 +144,18 @@ public class PlatformerApp extends GameApplication {
 
     @Override
     protected void initGame() {
+
+//        PropertyMap state = FXGL.getWorldProperties();
+//        long startGameTime = System.currentTimeMillis();
+//        state.setValue("startGameTime", startGameTime);
+//
+//        timer = getGameTimer().runAtInterval(() ->{
+//            long current = System.currentTimeMillis();
+//            long diffrence = current - (long) state.getValue("startGameTime");
+//
+//            timerText.setText(current + "s");
+//            scoreManager.setScore(current);
+//            }, Duration.millis(100));
         getGameWorld().addEntityFactory(new PlatformerFactory());
 
         player = null;
@@ -157,7 +184,6 @@ public class PlatformerApp extends GameApplication {
             @Override
             protected void onCollision(Entity muur, Entity trump) {
                 muur.removeFromWorld();
-                System.out.println("print");
             }
         });
         getPhysicsWorld().setGravity(0, 760);
@@ -212,7 +238,101 @@ public class PlatformerApp extends GameApplication {
 
     private void nextLevel() {
         if (geti("level") == MAX_LEVEL) {
+<<<<<<< Updated upstream
             showMessage("Gefeliciteerd je hebt gewonnen!");
+=======
+
+            FXGL.getGameController().pauseEngine();
+            showMessage("Gefeliciteerd je hebt gewonnen!");
+            FXGL.getGameScene().clearGameViews();
+            FXGL.getGameScene().clearUINodes();
+            getInput().clearAll();
+
+
+            //    protected void startSpel() {
+//        this.isBegonnen = true;
+//        getGameWorld().addEntityFactory(new PlatformerFactory());
+//
+//        player = null;
+//        nextLevel();
+////    }
+            FXGL.getGameScene().setBackgroundColor(Color.LIGHTBLUE);
+
+            FXGL.getGameScene().clearUINodes();
+
+
+
+            Label userLabel = new Label("Studentnummer:");
+            userLabel.setFont(Font.font("Arial", 24));
+            TextField userField = new TextField();
+            userField.setFont(Font.font("Arial", 24));
+            userField.setMaxWidth(400);
+            userField.setMaxHeight(30);
+            userField.setAlignment(Pos.CENTER);
+
+            Button loginButton = new Button("show scoreboard");
+            loginButton.setFont(Font.font("Arial", 24));
+            loginButton.setOnAction(e -> {
+                String username = userField.getText();
+                ;
+                userField.setVisible(false);
+                loginButton.setVisible(false);
+                userLabel.setVisible(false);
+
+
+// Voeg hier de code toe om de gebruiker in te loggen.
+
+            });
+
+
+            VBox vbox = new VBox();
+            vbox.setPrefWidth(1280);
+            vbox.setPrefHeight(720);
+            vbox.setAlignment(Pos.CENTER);
+// vbox.setSpacing(8);
+            vbox.getChildren().addAll(userLabel, userField, loginButton);
+
+            Pane borderPane = new Pane();
+            borderPane.setPrefWidth(1000);
+            borderPane.setPrefHeight(720);
+            borderPane.getChildren().add(vbox);
+// borderPane.setTranslateX(getApp)Width() / 2 - 20);
+// borderPane.setTranslateY(getAppHeight() / 2);
+
+            FXGL.getGameScene().addUINode(borderPane);
+
+            Duration userTime = Duration.seconds(getd("levelTime"));
+            textUserTime.setText(String.format("Your time: %.2f sec!", userTime.toSeconds()));
+
+
+
+
+//            long current = System.currentTimeMillis();
+//            System.out.println(current);
+////            scoreManager.setScore(current);
+////            this.scorebordScherm = new ScorebordScherm(this.scoreManager);
+////            addUINode(current);
+//
+////            TextNode textNode = getGameTimer();
+//            PropertyMap state = FXGL.getWorldProperties();
+//            long startGameTime = System.currentTimeMillis();
+//            state.setValue("startGameTime", startGameTime);
+//
+//            timer = getGameTimer().runAtInterval(() ->{
+//                long current = System.currentTimeMillis();
+//                long diffrence = current - (long) state.getValue("startGameTime");
+//
+//                timerText.setText(current + "s");
+//                scoreManager.setScore(current);
+//            }, Duration.millis(100));
+//            long current = System.currentTimeMillis();
+//            System.out.println(current);
+
+
+
+
+
+>>>>>>> Stashed changes
             return;
         }
 
@@ -253,8 +373,7 @@ public class PlatformerApp extends GameApplication {
     public void onPlayerDied() {
         //setLevel(geti("level"));
         showMessage("ded", () ->{
-            System.out.println("r");
-            getGameController().startNewGame();
+             getGameController().startNewGame();
 
         });
     }
@@ -265,11 +384,16 @@ public class PlatformerApp extends GameApplication {
             trump.getComponent(PhysicsComponent.class).overwritePosition(new Point2D(0, -655));
             player.setZIndex(Integer.MAX_VALUE);
         }
+<<<<<<< Updated upstream
 
 
 //        Level level = setLevelFromMap("tmx/level" + levelNum  + ".tmx");
           Level level = setLevelFromMap("tmx/level3.tmx");
         double shortestTime = level.getProperties().getDouble("star1time");
+=======
+        Level level = setLevelFromMap("tmx/level" + levelNum  + ".tmx");
+//      Level level = setLevelFromMap("tmx/level3.tmx");
+>>>>>>> Stashed changes
 
     }
 
