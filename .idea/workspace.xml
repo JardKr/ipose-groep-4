@@ -5,37 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3ec9511-ae6c-4b0c-9ded-b4aebc25fba8" name="Changes" comment="">
-
-      <change afterPath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-14.18.51.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-14.32.50.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-15.01.04.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-15.02.25.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-15.08.37.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-15.11.49.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-15.16.26.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-15.45.19.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-15.45.49.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/Trump.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/textures/trump.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.23.48.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.26.56.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.27.21.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.30.11.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.31.06.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.32.39.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.33.52.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.34.27.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.35.08.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/EntityType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/EntityType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlatformerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlatformerApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlatformerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlatformerFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlayerComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlayerComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/levels/tmx/level1.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/levels/tmx/level1.tmx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlatformerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlatformerApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlayerButtonHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-13.38.17.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-14.18.51.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-14.32.50.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-15.01.04.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-04-apr.-2023-15.02.25.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,86 +57,9 @@
       <recent name="C:\Users\koenm\IdeaProjects\demo1\src\main\resources\assets" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PlatformerApp">
-    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.demo1.HelloApplication" />
-      <module name="demo1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.demo1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlatformerApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.almasb.fxglgames.platformer.PlatformerApp" />
-      <module name="demo1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.almasb.fxglgames.platformer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
-      <setting name="path" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JarApplication">
-      <method v="2">
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Java Scratch">
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="demo1" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="demo1" />
-      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
@@ -221,10 +119,43 @@
         <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG">
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.demo1.HelloApplication" />
+      <module name="demo1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlatformerApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.almasb.fxglgames.platformer.PlatformerApp" />
+      <module name="demo1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.almasb.fxglgames.platformer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="demo1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="demo1" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
