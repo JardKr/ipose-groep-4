@@ -21,8 +21,19 @@ import com.almasb.fxgl.physics.CollisionHandler;
 import com.almasb.fxgl.physics.PhysicsComponent;
 import javafx.application.Platform;
 import javafx.geometry.Point2D;
+import javafx.geometry.Pos;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import javafx.util.Duration;
 
 import java.util.Map;
@@ -34,6 +45,11 @@ public class PlatformerApp extends GameApplication {
 
     private static final int MAX_LEVEL = 3;
     private static final int STARTING_LEVEL = 0;
+    private Image logo;
+    private Text title;
+    private Button startButton;
+    private boolean isBegonnen;
+    private Button exitButton;
 
     @Override
     protected void initSettings(GameSettings settings) {
@@ -48,14 +64,13 @@ public class PlatformerApp extends GameApplication {
             }
         });
         settings.setApplicationMode(ApplicationMode.DEVELOPER);
-        settings.setMainMenuEnabled(true);
+
 
     }
 
     private LazyValue<LevelEndScene> levelEndScene = new LazyValue<>(() -> new LevelEndScene());
     private Entity player;
     private Entity trump;
-
 
 
     @Override
@@ -83,7 +98,6 @@ public class PlatformerApp extends GameApplication {
                 player.getComponent(PlayerComponent.class).stop();
             }
         }, KeyCode.D, VirtualButton.RIGHT);
-
 
 
         getInput().addAction(new UserAction("Jump") {
@@ -139,7 +153,7 @@ public class PlatformerApp extends GameApplication {
         // player must be spawned after call to nextLevel, otherwise player gets removed
         // before the update tick _actually_ adds the player to game world
         player = spawn("player", 900, 50);
-        trump = spawn("trump",0,50);
+        trump = spawn("trump", 0, 50);
 
         set("player", player);
         set("trump", trump);
@@ -171,8 +185,6 @@ public class PlatformerApp extends GameApplication {
                 nextLevel();
             });
         });
-
-
 
 
         onCollisionOneTimeOnly(PLAYER, MESSAGE_PROMPT, (player, prompt) -> {
@@ -211,26 +223,74 @@ public class PlatformerApp extends GameApplication {
     }
 
     private void nextLevel() {
-        if (geti("level") == MAX_LEVEL) {
+        if (geti("level") == 1) {
+
+            FXGL.getGameController().pauseEngine();
             showMessage("Gefeliciteerd je hebt gewonnen!");
+
+
+            //    protected void startSpel() {
+//        this.isBegonnen = true;
+//        getGameWorld().addEntityFactory(new PlatformerFactory());
+//
+//        player = null;
+//        nextLevel();
+////    }
+            FXGL.getGameScene().setBackgroundColor(Color.LIGHTBLUE);
+
+            FXGL.getGameScene().clearUINodes();
+
+
+
+            Label userLabel = new Label("Studentnummer:");
+            userLabel.setFont(Font.font("Arial", 24));
+            TextField userField = new TextField();
+            userField.setFont(Font.font("Arial", 24));
+            userField.setMaxWidth(400);
+            userField.setMaxHeight(30);
+            userField.setAlignment(Pos.CENTER);
+
+            Button loginButton = new Button("show scoreboard");
+            loginButton.setFont(Font.font("Arial", 24));
+            loginButton.setOnAction(e -> {
+                String username = userField.getText();
+                ;
+                userField.setVisible(false);
+                loginButton.setVisible(false);
+                userLabel.setVisible(false);
+
+
+// Voeg hier de code toe om de gebruiker in te loggen.
+
+            });
+
+
+            VBox vbox = new VBox();
+            vbox.setPrefWidth(1280);
+            vbox.setPrefHeight(720);
+            vbox.setAlignment(Pos.CENTER);
+// vbox.setSpacing(8);
+            vbox.getChildren().addAll(userLabel, userField, loginButton);
+
+            Pane borderPane = new Pane();
+            borderPane.setPrefWidth(1000);
+            borderPane.setPrefHeight(720);
+            borderPane.getChildren().add(vbox);
+// borderPane.setTranslateX(getApp)Width() / 2 - 20);
+// borderPane.setTranslateY(getAppHeight() / 2);
+
+            FXGL.getGameScene().addUINode(borderPane);
             return;
         }
+
 
         inc("level", +1);
 
         setLevel(geti("level"));
     }
 
-    @Override
-    protected void initUI() {
-        if (isMobile()) {
-            var dpadView = getInput().createVirtualDpadView();
-            var buttonsView = getInput().createXboxVirtualControllerView();
 
-            addUINode(dpadView, 0, getAppHeight() - 290);
-            addUINode(buttonsView, getAppWidth() - 280, getAppHeight() - 290);
-        }
-    }
+
 
     @Override
     protected void onUpdate(double tpf) {
@@ -268,9 +328,7 @@ public class PlatformerApp extends GameApplication {
 
 
         Level level = setLevelFromMap("tmx/level" + levelNum  + ".tmx");
-
-        double shortestTime = level.getProperties().getDouble("star1time");
-
+//          Level level = setLevelFromMap("tmx/level3.tmx");
     }
 
     public static void main(String[] args) {
