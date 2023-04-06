@@ -36,6 +36,8 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 
+import java.io.*;
+import java.util.ArrayList;
 import java.util.Map;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
@@ -45,6 +47,9 @@ public class PlatformerApp extends GameApplication {
 
     private static final int MAX_LEVEL = 3;
     private static final int STARTING_LEVEL = 0;
+    private Label tijdlabel;
+    private String playerName;
+    private int levelTime;
     private Image logo;
     private Text title;
     private Button startButton;
@@ -143,6 +148,8 @@ public class PlatformerApp extends GameApplication {
 
     @Override
     protected void initGame() {
+        tijdlabel = new Label("TIme: " + levelTime);
+        VBox uiConainer = new VBox(tijdlabel);
         getGameWorld().addEntityFactory(new PlatformerFactory());
 
         player = null;
@@ -163,6 +170,11 @@ public class PlatformerApp extends GameApplication {
         viewport.setBounds(-1500, 0, 250 * 70, getAppHeight());
         viewport.bindToEntity(player, getAppWidth() / 2, getAppHeight() / 2);
         viewport.setLazy(true);
+
+        run(() -> {
+            levelTime++;
+            tijdlabel.setText("Time: " + levelTime);
+        }, Duration.seconds(1));
     }
 
     @Override
@@ -171,6 +183,14 @@ public class PlatformerApp extends GameApplication {
             @Override
             protected void onCollision(Entity muur, Entity trump) {
                 muur.removeFromWorld();
+                System.out.println("print");
+            }
+        });
+
+        FXGL.getPhysicsWorld().addCollisionHandler(new CollisionHandler(EntityType.WATER, EntityType.PLAYER) {
+            @Override
+            protected void onCollision(Entity water, Entity player) {
+                water.removeFromWorld();
                 System.out.println("print");
             }
         });
@@ -193,12 +213,7 @@ public class PlatformerApp extends GameApplication {
             despawnWithDelay(prompt, Duration.seconds(4.5));
         });
 
-//        onCollisionBegin(TRUMP, MUUR, (trump, muur) -> {
-//            var entity = getGameWorld().create("muur", new SpawnData(muur.getX(), muur.getY()).put("muur", muur));
-//
-//            muur.removeFromWorld();
-//
-//        });
+
 
         onCollisionBegin(PLAYER, KEY_PROMPT, (player, prompt) -> {
             String key = prompt.getString("key");
@@ -253,8 +268,8 @@ public class PlatformerApp extends GameApplication {
             Button loginButton = new Button("show scoreboard");
             loginButton.setFont(Font.font("Arial", 24));
             loginButton.setOnAction(e -> {
-                String username = userField.getText();
-                ;
+                playerName = userField.getText();
+
                 userField.setVisible(false);
                 loginButton.setVisible(false);
                 userLabel.setVisible(false);
@@ -263,6 +278,8 @@ public class PlatformerApp extends GameApplication {
 // Voeg hier de code toe om de gebruiker in te loggen.
 
             });
+
+
 
 
             VBox vbox = new VBox();
@@ -329,6 +346,76 @@ public class PlatformerApp extends GameApplication {
 
         Level level = setLevelFromMap("tmx/level" + levelNum  + ".tmx");
 //          Level level = setLevelFromMap("tmx/level3.tmx");
+    }
+
+
+    public ArrayList<User> leesTakenUitBestand(){
+        ArrayList<User> taken = new ArrayList<>();
+        try {
+            BufferedReader bufReader = new BufferedReader(new FileReader(new File("C:\\ipose-groep-4\\src\\main\\java\\com\\almasb\\fxglgames\\platformer\\highscores.txt")));
+            String regel = bufReader.readLine();
+            while (regel != null) {
+                String [] taakRegel = regel.split(",");
+                User taak = new User(taakRegel[0], taakRegel[1]);
+                taken.add(taak);
+
+                regel = bufReader.readLine();
+            }
+            bufReader.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("File was not found! Error:");
+            e.printStackTrace();
+        } catch (IOException e) {
+            System.out.println("IOException occured! Error:");
+            e.printStackTrace();
+        }
+
+        return taken;
+    }
+
+
+
+
+
+    private void showScoreboard() {
+// Create scoreboard scene
+        VBox container = new VBox();
+        container.setAlignment(Pos.CENTER);
+        container.setSpacing(20);
+
+        Label headerLabel = new Label("Game finished!");
+        headerLabel.setFont(new Font(36));
+        container.getChildren().add(headerLabel);
+
+        Label timeLabel = new Label(playerName + ": " + levelTime + "s");
+        timeLabel.setFont(new Font(24));
+        for (int i = 0; i < leesTakenUitBestand().size(); i++) {
+            System.out.println("hoi");
+            ArrayList<User> user = leesTakenUitBestand();
+            String stringtijd = user.get(i).getTijd();
+            String stringnaam = user.get(i).getNaam();
+            Label tijdlabel = new Label(stringtijd);
+            Label naamlabel = new Label(stringnaam);
+            Label alllabel = new Label(stringnaam, tijdlabel);
+            container.getChildren().add(alllabel);
+        }
+
+        Button exitButton = new Button("Exit");
+        exitButton.setOnAction(event -> {
+            FXGL.getGameController().exit();
+        });
+        container.getChildren().add(exitButton);
+
+        getGameScene().addUINode(container);
+    }
+
+    protected void stopSpel() {
+        System.out.println("print");
+        try (FileWriter writer = new FileWriter("C:\\ipose-groep-4\\src\\main\\java\\com\\almasb\\fxglgames\\platformer\\highscores.txt", true)) {
+            writer.append(playerName).append(",").append(String.valueOf(levelTime)).append("\n");
+        } catch (IOException e) {
+            System.err.println("Kon het scorebestand niet schrijven: " + e.getMessage());
+        }
     }
 
     public static void main(String[] args) {

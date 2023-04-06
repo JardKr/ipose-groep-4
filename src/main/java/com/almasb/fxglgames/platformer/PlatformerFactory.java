@@ -56,6 +56,16 @@ public class PlatformerFactory implements EntityFactory {
                 .build();
     }
 
+    @Spawns("water")
+    public Entity newWater(SpawnData data){
+        return entityBuilder(data)
+                .type(WATER)
+                .bbox(new HitBox(BoundingShape.box(data.<Integer>get("width"), data.<Integer>get("height"))))
+                .with(new PhysicsComponent())
+                .with(new CollidableComponent(true))
+                .build();
+    }
+
     @Spawns("exitTrigger")
     public Entity newExitTrigger(SpawnData data) {
         return entityBuilder(data)
