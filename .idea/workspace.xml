@@ -5,34 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3ec9511-ae6c-4b0c-9ded-b4aebc25fba8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/logs/FXGL-06-apr.-2023-09.53.19.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/FXGL-06-apr.-2023-09.55.16.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/FXGL-06-apr.-2023-09.58.28.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/FXGL-06-apr.-2023-10.01.44.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/FXGL-06-apr.-2023-10.03.08.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/FXGL-06-apr.-2023-10.09.13.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/FXGL-06-apr.-2023-10.22.13.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/FXGL-06-apr.-2023-10.22.42.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/db.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/highscores.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-05-apr.-2023-16.48.21.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-05-apr.-2023-16.49.56.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-05-apr.-2023-16.57.13.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-05-apr.-2023-16.58.30.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-05-apr.-2023-17.00.11.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-05-apr.-2023-17.01.37.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-05-apr.-2023-17.21.50.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-05-apr.-2023-17.22.58.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-05-apr.-2023-17.24.00.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-05-apr.-2023-17.24.59.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/EntityType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/EntityType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-06-apr.-2023-09.53.19.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-06-apr.-2023-09.55.16.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-06-apr.-2023-09.58.28.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-06-apr.-2023-10.01.44.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-06-apr.-2023-10.03.08.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-06-apr.-2023-10.09.13.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-06-apr.-2023-10.22.13.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-06-apr.-2023-10.22.42.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-06-apr.-2023-10.24.50.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-06-apr.-2023-10.27.11.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlatformerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlatformerApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlatformerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/PlatformerFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/levels/tmx/level2.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/levels/tmx/level2.tmx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/levels/tmx/level3.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/levels/tmx/level3.tmx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/levels/tmx/tiles_spritesheet.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/levels/tmx/tiles_spritesheet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/highscores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/almasb/fxglgames/platformer/highscores.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,17 +46,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/ipose-groep-4/src/main/resources/assets/levels/tmx/level1.tmx",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/ipose-groep-4/src/main/resources/assets/levels/tmx/level1.tmx&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.almasb.fxglgames.platformer" />
@@ -83,67 +68,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.PlatformerApp">
-    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KtorApplicationConfigurationType" factoryName="Ktor">
-      <option name="alternativeJrePath" value="" />
-      <option name="alternativeJrePathEnabled" value="false" />
-      <option name="includeProvidedScope" value="true" />
-      <option name="mainClass" value="" />
-      <option name="passParentEnvs" value="true" />
-      <option name="programParameters" value="" />
-      <option name="shortenCommandLine" />
-      <option name="vmParameters" value="" />
-      <option name="workingDirectory" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="MicronautRunConfigurationType" factoryName="Micronaut">
-      <option name="alternativeJrePath" value="" />
-      <option name="alternativeJrePathEnabled" value="false" />
-      <option name="includeProvidedScope" value="true" />
-      <option name="mainClass" value="" />
-      <option name="passParentEnvs" value="true" />
-      <option name="programParameters" value="" />
-      <option name="shortenCommandLine" />
-      <option name="vmParameters" value="" />
-      <option name="workingDirectory" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="SwaggerCodegen">
-      <option name="activeConfigurationType" value="FILE" />
-      <option name="configurationPath" value="" />
-      <option name="customJreEnabled" value="false" />
-      <option name="customTemplatesPath" value="" />
-      <option name="enableDebugLogging" value="false" />
-      <option name="generateToPath" value="" />
-      <option name="generationParameters">
-        <list />
-      </option>
-      <option name="generatorPath" value="" />
-      <option name="jdkPath" value="" />
-      <option name="language" value="" />
-      <option name="specificationPath" value="" />
-      <method v="2">
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.demo1.HelloApplication" />
       <module name="demo1" />
@@ -159,28 +83,13 @@
     </configuration>
     <configuration name="PlatformerApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.almasb.fxglgames.platformer.PlatformerApp" />
-      <module name="ipose-groep-4" />
+      <module name="demo1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.almasb.fxglgames.platformer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="demo1" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="demo1" />
-      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />

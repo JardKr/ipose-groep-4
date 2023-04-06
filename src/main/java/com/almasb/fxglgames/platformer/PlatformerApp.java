@@ -22,10 +22,7 @@ import com.almasb.fxgl.physics.PhysicsComponent;
 import javafx.application.Platform;
 import javafx.geometry.Point2D;
 import javafx.geometry.Pos;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
@@ -34,11 +31,13 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.Optional;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
 import static com.almasb.fxglgames.platformer.EntityType.*;
@@ -53,8 +52,58 @@ public class PlatformerApp extends GameApplication {
     private Image logo;
     private Text title;
     private Button startButton;
-    private boolean isBegonnen;
+    private boolean isBegonnen = false;
     private Button exitButton;
+
+
+    @Override
+    protected void initUI(){
+        if (!isBegonnen) {
+            VBox vbox = new VBox();
+            vbox.setAlignment(Pos.CENTER);
+            vbox.setSpacing(10);
+
+            Label naamLabel = new Label("Wat is je naam?");
+            naamLabel.setFont(new Font(30));
+            naamLabel.setAlignment(Pos.CENTER);
+            naamLabel.setTextFill(Color.WHITE);
+
+            TextField naamField = new TextField();
+            naamField.setFont(new Font(24));
+
+            Button startButton = new Button("Start");
+            startButton.setFont(new Font(24));
+            startButton.setOnAction(e -> {
+                playerName = naamField.getText();
+                vbox.setVisible(false);
+                isBegonnen = true;
+                getGameWorld().addEntityFactory(new PlatformerFactory());
+
+                player = null;
+                trump = null;
+                nextLevel();
+
+                player = spawn("player", 900, 50);
+                trump = spawn("trump", 0, 50);
+
+                set("player", player);
+                set("trump", trump);
+                spawn("background");
+
+                Viewport viewport = getGameScene().getViewport();
+                viewport.setBounds(-1500, 0, 250 * 70, getAppHeight());
+                viewport.bindToEntity(player, getAppWidth() / 2, getAppHeight() / 2);
+                viewport.setLazy(true);
+
+
+            });
+
+            vbox.getChildren().addAll(naamLabel, naamField, startButton);
+
+            getGameScene().addUINode(vbox);
+        }
+
+    }
 
     @Override
     protected void initSettings(GameSettings settings) {
@@ -148,28 +197,22 @@ public class PlatformerApp extends GameApplication {
 
     @Override
     protected void initGame() {
+        if (isBegonnen){
+            player = null;
+            trump = null;
+            PlatformerFactory platformerFactory = new PlatformerFactory();
+            getGameWorld().addEntityFactory(platformerFactory);
+
+            player = spawn("player", 900, 50);
+            trump = spawn("trump", 0, 50);
+
+            set("player", player);
+            set("trump", trump);
+            spawn("background");
+        }
+
         tijdlabel = new Label("TIme: " + levelTime);
-        VBox uiConainer = new VBox(tijdlabel);
-        getGameWorld().addEntityFactory(new PlatformerFactory());
 
-        player = null;
-        trump = null;
-
-        nextLevel();
-
-        // player must be spawned after call to nextLevel, otherwise player gets removed
-        // before the update tick _actually_ adds the player to game world
-        player = spawn("player", 900, 50);
-        trump = spawn("trump", 0, 50);
-
-        set("player", player);
-        set("trump", trump);
-        spawn("background");
-
-        Viewport viewport = getGameScene().getViewport();
-        viewport.setBounds(-1500, 0, 250 * 70, getAppHeight());
-        viewport.bindToEntity(player, getAppWidth() / 2, getAppHeight() / 2);
-        viewport.setLazy(true);
 
         run(() -> {
             levelTime++;
@@ -238,47 +281,15 @@ public class PlatformerApp extends GameApplication {
     }
 
     private void nextLevel() {
-        if (geti("level") == 1) {
-
+        if (geti("level") == MAX_LEVEL){
             FXGL.getGameController().pauseEngine();
             showMessage("Gefeliciteerd je hebt gewonnen!");
 
 
-            //    protected void startSpel() {
-//        this.isBegonnen = true;
-//        getGameWorld().addEntityFactory(new PlatformerFactory());
-//
-//        player = null;
-//        nextLevel();
-////    }
+
             FXGL.getGameScene().setBackgroundColor(Color.LIGHTBLUE);
 
             FXGL.getGameScene().clearUINodes();
-
-
-
-            Label userLabel = new Label("Studentnummer:");
-            userLabel.setFont(Font.font("Arial", 24));
-            TextField userField = new TextField();
-            userField.setFont(Font.font("Arial", 24));
-            userField.setMaxWidth(400);
-            userField.setMaxHeight(30);
-            userField.setAlignment(Pos.CENTER);
-
-            Button loginButton = new Button("show scoreboard");
-            loginButton.setFont(Font.font("Arial", 24));
-            loginButton.setOnAction(e -> {
-                playerName = userField.getText();
-
-                userField.setVisible(false);
-                loginButton.setVisible(false);
-                userLabel.setVisible(false);
-
-
-// Voeg hier de code toe om de gebruiker in te loggen.
-
-            });
-
 
 
 
@@ -287,7 +298,6 @@ public class PlatformerApp extends GameApplication {
             vbox.setPrefHeight(720);
             vbox.setAlignment(Pos.CENTER);
 // vbox.setSpacing(8);
-            vbox.getChildren().addAll(userLabel, userField, loginButton);
 
             Pane borderPane = new Pane();
             borderPane.setPrefWidth(1000);
@@ -297,6 +307,8 @@ public class PlatformerApp extends GameApplication {
 // borderPane.setTranslateY(getAppHeight() / 2);
 
             FXGL.getGameScene().addUINode(borderPane);
+            stopSpel();
+            showScoreboard();
             return;
         }
 
@@ -311,28 +323,29 @@ public class PlatformerApp extends GameApplication {
 
     @Override
     protected void onUpdate(double tpf) {
-        inc("levelTime", tpf);
+        if (isBegonnen) {
+            inc("levelTime", tpf);
 
-        if (player.getY() > getAppHeight()) {
-            onPlayerDied();
+            if (player.getY() > getAppHeight()) {
+                onPlayerDied();
+            }
+
+            onCollisionBegin(PLAYER, TRUMP, (player, trump) -> {
+
+                onPlayerDied();
+
+            });
+            trump.getComponent(Trump.class).right();
         }
-
-        onCollisionBegin(PLAYER, TRUMP, (player, trump) -> {
-            onPlayerDied();
-        });
-
-
-        trump.getComponent(Trump.class).right();
-
-
     }
 
     public void onPlayerDied() {
-        //setLevel(geti("level"));
+
         showMessage("ded", () ->{
             System.out.println("r");
-            getGameController().startNewGame();
-
+            setLevel(geti("level"));
+//            getPrimaryStage().close();
+//            Platform.runLater(() -> new ReloadApp().start(new Stage()));
         });
     }
 
@@ -352,7 +365,7 @@ public class PlatformerApp extends GameApplication {
     public ArrayList<User> leesTakenUitBestand(){
         ArrayList<User> taken = new ArrayList<>();
         try {
-            BufferedReader bufReader = new BufferedReader(new FileReader(new File("C:\\ipose-groep-4\\src\\main\\java\\com\\almasb\\fxglgames\\platformer\\highscores.txt")));
+            BufferedReader bufReader = new BufferedReader(new FileReader(new File("C:\\Users\\koenm\\Documents\\GitHub\\ipose-groep-4\\src\\main\\java\\com\\almasb\\fxglgames\\platformer\\highscores.txt")));
             String regel = bufReader.readLine();
             while (regel != null) {
                 String [] taakRegel = regel.split(",");
@@ -411,7 +424,7 @@ public class PlatformerApp extends GameApplication {
 
     protected void stopSpel() {
         System.out.println("print");
-        try (FileWriter writer = new FileWriter("C:\\ipose-groep-4\\src\\main\\java\\com\\almasb\\fxglgames\\platformer\\highscores.txt", true)) {
+        try (FileWriter writer = new FileWriter("C:\\Users\\koenm\\Documents\\GitHub\\ipose-groep-4\\src\\main\\java\\com\\almasb\\fxglgames\\platformer\\highscores.txt", true)) {
             writer.append(playerName).append(",").append(String.valueOf(levelTime)).append("\n");
         } catch (IOException e) {
             System.err.println("Kon het scorebestand niet schrijven: " + e.getMessage());
